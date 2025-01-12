@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      background: linear-gradient(135deg, #6EE7B7 0%, #02202b 100%);
+    }
+    .loginButton{
+      background-color: #e63946;
+    }
+    .container{
+      background: #f1faee;
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+  <div class="container max-w-md mx-auto bg-white p-8 rounded-xl shadow-lg">
+    <form action="/login" method="POST">
+      <h1 class="text-3xl font-bold mb-6 text-center text-gray-800">Login</h1>
+      
+      <div class="mb-5">
+        <label for="email" class="block text-lg text-gray-700 font-medium mb-2">Email Address:</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+          placeholder="Enter your email address"
+          autocomplete="off"
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300"
+        />
+      </div>
+      
+      <div class="mb-5">
+        <label for="password" class="block text-lg text-gray-700 font-medium mb-2">Password:</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          required
+          placeholder="Enter your password"
+          autocomplete="new-password"
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300"
+        />
+      </div>
+      
+      
+      <button
+        type="submit"
+        class="w-full text-white py-3 rounded-lg hover:bg-red-600 transition duration-300 font-semibold text-lg loginButton"
+      >
+  Login
+</button>
+
+      
+      <p class="mt-4 text-center text-gray-600 text-lg">
+        Don't have an account?
+        <a href="/register" class="text-indigo-600 hover:underline">Register</a>
+      </p>
+    </form>
+  </div>
+</body>
+</html>

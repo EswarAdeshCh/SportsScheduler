@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reports</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+
+
+    .table-header {
+      background: #e63946; 
+      color: white;
+    }
+
+    .table-row {
+      background: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .table-row:hover {
+      background-color: #F3F4F6;
+    }
+
+    .table-th, .table-td {
+      padding: 1rem;
+      border: 1px solid #e5e7eb;
+      text-align: left;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .section-header {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #1F2937;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #264653, #2a9d8f);
+      color: white;
+      padding: 1% 0;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    .mt-12{
+      background: #f1faee; 
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body id="reports-page" class="bg-gray-100">
+
+  <header class="header">
+    <div class="container">
+      <h1>Sports Reports</h1>
+    </div>
+  </header>
+
+  <div class="container mt-8">
+
+    <section class="mt-12">
+      <h2 class="section-header">Session Details</h2>
+      <div class="overflow-x-auto shadow-lg rounded-lg">
+        <table class="min-w-full bg-white border-collapse">
+          <thead class="table-header">
+            <tr>
+              <th class="table-th">Sport</th>
+              <th class="table-th">Teams</th>
+              <th class="table-th">Date</th>
+              <th class="table-th">Venue</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% sessions.forEach(session => { %>
+              <tr class="table-row">
+                <td class="table-td"><%= session.sport_name %></td>
+                <td class="table-td"><%= session.team1 %> vs <%= session.team2 %></td>
+                <td class="table-td"><%= session.date %></td>
+                <td class="table-td"><%= session.venue %></td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mt-12">
+      <h2 class="section-header">Sport Popularity</h2>
+      <div class="overflow-x-auto shadow-lg rounded-lg">
+        <table class="min-w-full bg-white border-collapse">
+          <thead class="table-header">
+            <tr>
+              <th class="table-th">Sport</th>
+              <th class="table-th">Number of Sessions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% popularity.forEach(sport => { %>
+              <tr class="table-row">
+                <td class="table-td"><%= sport.name %></td>
+                <td class="table-td"><%= sport.count %></td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
