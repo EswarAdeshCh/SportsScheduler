@@ -13,5 +13,6 @@ T           rack the number of players joining games.
         Players:
             Find and join games.
             Start their own games and invite others.
+            
     Password Protection:
         Passwords are securely stored and hidden to ensure account safety.
