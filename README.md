@@ -2,6 +2,7 @@
 The Sports Scheduler is a simple and easy-to-use website designed to help plan and manage sports events. It includes features such as user authentication, role-based access control, and tools for organizing games.
 
 Key Features:
+
     User Authentication:
         Users must sign up and log in to keep their information secure.
 
