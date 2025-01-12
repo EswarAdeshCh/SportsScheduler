@@ -9,7 +9,7 @@ Key Features:
         Admins:
             Create and manage game schedules.
             Add, edit, or delete games at any time.
-T           rack the number of players joining games.
+            Track the number of players joining games.
         Players:
             Find and join games.
             Start their own games and invite others.
